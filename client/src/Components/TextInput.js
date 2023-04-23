@@ -1,22 +1,25 @@
-import React from 'react'
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
 function TextInput() {
   return (
-    <div>
-        <table>
-            <tr>
-                <td> Enter Source Number/E-mail address: </td>
-                <td> <input type="text" name="source" id="source" /> </td>
-            </tr>
-            <tr>
-                <td> Enter Message: </td>
-                <td> <input type="text" name="message" id="message" /> </td>
-            </tr>
+    <Form className="py-5">
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label className="h3">
+          Please enter the source ( Email/SMS ){" "}
+        </Form.Label>
+        <Form.Control type="email" placeholder="Source" />
+      </Form.Group>
 
-            <button type="submit">Submit</button>
-        </table>
-    </div>
-  )
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label className="h3">Enter text</Form.Label>
+        <Form.Control type="text" placeholder="Message" />
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
+  );
 }
 
-export default TextInput
+export default TextInput;

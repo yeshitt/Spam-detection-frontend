@@ -1,25 +1,45 @@
-import React, {useState} from 'react'
-import Navbar from '../Components/Navbar'
-import TextInput from '../Components/TextInput'
-import CallRecInput from '../Components/CallRecInput'
+import React, { useState } from "react";
+import TextInput from "../Components/TextInput";
+import CallRecInput from "../Components/CallRecInput";
+import NavbarMain from "../Components/Navbar";
+import Button from "react-bootstrap/Button";
 
 function Home() {
-  let [number, setNumber] = useState(true)
+  let [number, setNumber] = useState(true);
   return (
     <div>
-        <Navbar />
+      <NavbarMain />
 
-        <div className="inputType">
-          <button id="text" name="inputType" value="Text Message" onClick={()=> setNumber(true)}> Text Message </button>  
-          <button id="callRec" name="inputType" value="Call Recording" onClick={()=> setNumber(false)}> Call </button>
-        </div>
-
-        {number ? 
-        <TextInput /> :
-        <CallRecInput />
-        }
+      <div className="inputType">
+        <Button
+          className="mt-4 mx-auto"
+          variant="secondary"
+          style={{ width: "200" }}
+          size="lg"
+          active
+          id="text"
+          name="inputType"
+          value="Text Message"
+          onClick={() => setNumber(true)}
+        >
+          Text Message
+        </Button>{" "}
+        <Button
+          className="mt-4"
+          variant="secondary"
+          size="lg"
+          active
+          id="callRec"
+          name="inputType"
+          value="Call Recording"
+          onClick={() => setNumber(false)}
+        >
+          Call
+        </Button>
+      </div>
+      {number ? <TextInput /> : <CallRecInput />}
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

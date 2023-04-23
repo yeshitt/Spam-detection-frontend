@@ -1,16 +1,17 @@
-import React from 'react'
+import React from "react";
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
 
-function Navbar() {
+function NavbarMain() {
   return (
     <div>
-        <h2>Spam Detection Filter</h2>
-
-        {/* <div className="buttons">
-            <button id="login">Login</button>
-            <button id="signup">Signup</button>
-        </div> */}
+      <Navbar className="mb-3" expand="lg" variant="light" bg="dark">
+        <Container>
+          <Navbar className="text-light py-3">Spam Detection System</Navbar>
+        </Container>
+      </Navbar>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default NavbarMain;
