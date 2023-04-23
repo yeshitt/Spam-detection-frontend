@@ -8,7 +8,7 @@ function CallRecInput() {
       <Form className="py-5">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label className="h3">
-            Please enter the source Phone No.{" "}
+            Enter the source Phone No.{" "}
           </Form.Label>
           <Form.Control type="email" placeholder="Source" />
         </Form.Group>

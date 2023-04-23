@@ -6,7 +6,7 @@ function TextInput() {
     <Form className="py-5">
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label className="h3">
-          Please enter the source ( Email/SMS ){" "}
+          Enter the source ( Email/SMS ){" "}
         </Form.Label>
         <Form.Control type="email" placeholder="Source" />
       </Form.Group>

@@ -16,7 +16,7 @@ function Home() {
           variant="secondary"
           style={{ width: "200" }}
           size="lg"
-          active
+          active = {number?true:false}
           id="text"
           name="inputType"
           value="Text Message"
@@ -28,7 +28,7 @@ function Home() {
           className="mt-4"
           variant="secondary"
           size="lg"
-          active
+          active = {number?false:true}
           id="callRec"
           name="inputType"
           value="Call Recording"
