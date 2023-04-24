@@ -1,58 +1,34 @@
-import React, {useState} from 'react'
-
+import React, { useState } from "react";
+import Login from "./Login";
+import Register from "./Register";
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
+import "../style/auth.css";
+import Button from "react-bootstrap/Button";
 function Auth() {
-    const [doLogin, setDoLogin] = useState(true);
+  const [doLogin, setDoLogin] = useState(false);
   return (
     <div>
-        <h2>Spam Detection Filter</h2>
-        <p>  
-            ?? Description of site goes here ??
-        </p>
-
-        <div>
-            <button onClick={()=> setDoLogin(true)}>Login</button>
-            <button onClick={()=> setDoLogin(false)}>Sign Up</button>
-            {
-                doLogin ?
-                <table className="login">
-                    <tbody>
-                        <tr>
-                            <td><label htmlFor="email">Enter Email:</label></td>
-                            <td><input type="text" name="email" id="email" /></td>
-                        </tr>
-                        <tr>
-                            <td><label htmlFor="password">Enter Password:</label></td>
-                            <td><input type="text" name="password" id="password" /></td>
-                        </tr>
-                        <tr>
-                            <td colSpan="2"><button type="submit">Login</button></td>
-                        </tr>
-                    </tbody>
-                </table>:
-                <table className="signin">
-                    <tbody>
-                        <tr>
-                            <td><label htmlFor="name">Enter Name:</label></td>
-                            <td><input type="text" name="name" id="name" /></td>
-                        </tr>
-                        <tr>
-                            <td><label htmlFor="email">Enter Email:</label></td>
-                            <td><input type="text" name="email" id="email" /></td>
-                        </tr>
-                        <tr>
-                            <td><label htmlFor="password">Enter Password:</label></td>
-                            <td><input type="text" name="password" id="password" /></td>
-                        </tr>
-                        <tr>
-                            <td colSpan="2"><button type="submit">Sign Up</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            }
-        </div> 
-            
+      <Navbar className="mb-4 py-3" expand="lg" variant="light" bg="dark">
+        <Container>
+          <Navbar className="text-light h1 py-3" id="nav">
+            <div className="heading">Spam Alert System</div>
+            <div>
+              <Button className="mx-5" onClick={() => setDoLogin(true)}>
+                Login
+              </Button>
+              <Button className="mx-5" onClick={() => setDoLogin(false)}>
+                Sign Up
+              </Button>
+            </div>
+          </Navbar>
+        </Container>
+      </Navbar>
+      <Container>
+        <div>{doLogin ? <Login /> : <Register />}</div>
+      </Container>
     </div>
-  )
+  );
 }
 
-export default Auth
+export default Auth;

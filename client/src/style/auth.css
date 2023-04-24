@@ -1,0 +1,6 @@
+#nav{
+    display:flex;
+    align-items: stretch;
+    justify-content: space-between;
+    /* align-items: auto; */
+}
