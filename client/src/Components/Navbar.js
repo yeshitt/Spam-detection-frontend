@@ -5,9 +5,9 @@ import Navbar from "react-bootstrap/Navbar";
 function NavbarMain() {
   return (
     <div>
-      <Navbar className="mb-1" expand="lg" variant="light" bg="dark">
+      <Navbar className="mb-1 py-3" expand="lg" variant="light" bg="dark">
         <Container>
-          <Navbar className="text-light py-1">Spam Detection System</Navbar>
+          <Navbar className="text-light h1 py-3">Spam Alert System</Navbar>
         </Container>
       </Navbar>
     </div>
